@@ -1,2 +1,2 @@
 # Karaoke-System
-A Spring Project Based On Oracle.
+A Java Application With Spring, Spring MVC, Mybatis, and Oracle ...
