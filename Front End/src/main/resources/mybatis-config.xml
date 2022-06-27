@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="db.properties"></properties>
+    <settings>
+<!--        配置驼峰映射-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+            <!--   设置mybatis输出日志   STDOUT_LOGGING把日志输出到控制台  -->
+        <setting name="logImpl" value="STDOUT_LOGGING" />
+    </settings>
+<!--   配置别名映射-->
+    <typeAliases>
+<!--        默认情况下别名是类名的小写开头-->
+        <package name="file.zhang.entity"/>
+<!--        <typeAlias type="vip.epss.domain.User" alias="User"></typeAlias>-->
+    </typeAliases>
+</configuration>

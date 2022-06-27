@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>zthKTV</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/my.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/js/my_check_room.js"></script>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+
+<!--功能显示-->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" >
+    <!--        左对齐-->
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="./main.html">
+        <img src="/images/logo.jpg" alt="logo" style="width:60px;">
+    </a>
+
+    <!-- 普通导航 -->
+    <ul class="nav col-9 " id="function_opt">
+        <li class="nav-item">
+            <a class="nav-link" href="./book_room.html">预约房间</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./check_room.html">查看预订记录</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/checkroom.html"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/checkroom.html"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/checkroom.html"></a>
+        </li>
+
+        <li class="nav-item dropdown" id="navbardrop5">
+            <div class="nav-link dropdown-toggle"  data-toggle="dropdown" id="item1"></div>
+            <div class="dropdown-menu" id="userdrop">
+                <div id="item2" class="dropdown-item"></div>
+                <div id="item3" class="dropdown-item"></div>
+                <div id="item4" class="dropdown-item"></div>
+                <div id="item5" class="dropdown-item"></div>
+            </div>
+        </li>
+
+    </ul>
+    <!--        右对齐-->
+
+    <div class="col-3 ">
+        <button type="button" class="btn btn-outline-primary " id="logout_button">退出登录</button>
+        <button type="button" class="btn btn-outline-primary " data-toggle="modal" data-target="#register_btn" id="register_button" >注册</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login_btn" id="login_button">登录</button>
+    </div>
+
+
+
+</nav>
+<div class="modal fade" id="login_btn">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+                <h4 class="modal-title">登录</h4>
+                <!--                关闭-->
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+                <form action="" class="needs-validation" name="form1" >
+                    <div class="form-group">
+                        <label for="uname">Username:</label>
+                        <input type="text" class="form-control" id="uname" placeholder="输入用户名" name="uname" required>
+
+                        <div id="username-feedback">请输入用户名！</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="输入密码" name="pwd" required>
+
+                        <div id="password-feedback">请输入密码！</div>
+                    </div>
+                    <button type="button" class="btn btn-info" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="login_1">提交</button>
+                </form>
+            </div>
+
+            <!-- 模态框底部 -->
+            <!--            <div class="modal-footer">-->
+            <!--                <button type="button" class="btn btn-info" data-dismiss="modal">取消</button>-->
+            <!--                <button type="button" class="btn btn-info" data-dismiss="modal">登录</button>-->
+            <!--            </div>-->
+
+        </div>
+    </div>
+</div>
+
+/nav>
+<div class="modal fade" id="register_btn">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+                <h4 class="modal-title">注册</h4>
+                <!--                关闭-->
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+                <form action="" class="needs-validation" name="form2" >
+                    <div class="form-group">
+                        <label for="uname">用户名:</label>
+                        <input type="text" class="form-control" id="uname2" placeholder="输入用户名" name="uname2" required>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">密码:</label>
+                        <input type="text" class="form-control" id="pwd2" placeholder="输入密码" name="pwd2" required>
+
+
+                    </div>
+                    <div class="form-group">
+                        <label for="name2">姓名:</label>
+                        <input type="text" class="form-control" id="name2" placeholder="输入" name="name2" required>
+
+
+                    </div>
+                    <div class="form-group">
+                        <label for="phone2">电话号码:</label>
+                        <input type="text" class="form-control" id="phone2" placeholder="输入密码" name="phone2" required>
+
+
+                    </div>
+                    <button type="button" class="btn btn-info" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="register_1">提交</button>
+                </form>
+            </div>
+
+            <!-- 模态框底部 -->
+            <!--            <div class="modal-footer">-->
+            <!--                <button type="button" class="btn btn-info" data-dismiss="modal">取消</button>-->
+            <!--                <button type="button" class="btn btn-info" data-dismiss="modal">登录</button>-->
+            <!--            </div>-->
+
+        </div>
+    </div>
+</div>
+<br><br><br><br><br>
+<div class="alert alert-success">
+    <strong>查看预订信息</strong>
+</div>
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>订单号</th>
+            <th>房间号</th>
+            <th>时间</th>
+            <th>状态</th>
+        </tr>
+        </thead>
+        <tbody id="book_form">
+        <tr>
+        </tr>
+        <!--        <tr>-->
+        <!--            <td>John</td>-->
+        <!--            <td>Doe</td>-->
+        <!--            <td>john@example.com</td>-->
+        <!--        </tr>-->
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
